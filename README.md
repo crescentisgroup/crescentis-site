@@ -52,7 +52,7 @@ Ce site est automatiquement déployé sur : **https://crescentisgroup.github.io/
 ## Contact
 
 📍 **Adresse** : Riviera Palmeraie, Abidjan, Côte d'Ivoire  
-📧 **Email** : contact@crescentisgroup.com  
+📧 **Email** : crescentis.group@gmail.com  
 🌐 **Web** : https://crescentisgroup.github.io/crescentis-site  
 
 ---
