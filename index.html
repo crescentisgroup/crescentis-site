@@ -1,501 +1,285 @@
-/* --- CHARTE GRAPHIQUE CRESCENTIS GROUP --- */
-:root {
-    --primary-color: #543A20;    /* Marron Chocolat du Logo */
-    --secondary-color: #C61650;  /* Rouge Carmin / Bordeaux du Logo */
-    --accent-color: #A31241;     /* Ombre Rose/Bordeaux soutenue */
-    --text-dark: #2c2520;
-    --text-light: #ffffff;
-    --bg-light: #fbf9f6;         /* Blanc cassé chaud */
-    --bg-white: #ffffff;
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    color: var(--text-dark);
-    background-color: var(--bg-light);
-    line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* --- BARRE DE NAVIGATION --- */
-.main-header {
-    background-color: var(--bg-white);
-    box-shadow: 0 2px 15px rgba(84, 58, 32, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-}
-
-.logo h1 {
-    font-size: 24px;
-    color: var(--primary-color);
-    font-weight: 800;
-}
-
-.logo h1 span {
-    color: var(--secondary-color);
-}
-
-.nav-menu ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.nav-menu ul li a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 600;
-    padding: 10px 15px;
-    transition: var(--transition);
-}
-
-.nav-menu ul li a:hover, .nav-menu ul li a.active {
-    color: var(--secondary-color);
-}
-
-.nav-menu ul li a.btn-cta {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-left: 10px;
-}
-
-.nav-menu ul li a.btn-cta:hover {
-    background-color: var(--accent-color);
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: var(--primary-color);
-    cursor: pointer;
-}
-
-/* --- HERO SECTION --- */
-.hero-section {
-    background: linear-gradient(135deg, rgba(84, 58, 32, 0.9), rgba(198, 22, 80, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200') no-repeat center center/cover;
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    color: var(--text-light);
-    margin-top: 70px;
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.badge {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.hero-section h2 {
-    font-size: 48px;
-    margin: 20px 0;
-    font-weight: 700;
-}
-
-.hero-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.btn-primary {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-}
-
-.btn-primary:hover {
-    background-color: var(--accent-color);
-}
-
-.btn-secondary {
-    border: 2px solid var(--text-light);
-    color: var(--text-light);
-    margin-left: 15px;
-}
-
-.btn-secondary:hover {
-    background-color: var(--text-light);
-    color: var(--primary-color);
-}
-
-/* --- VALEURS & STATS --- */
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.values-section {
-    transform: translateY(-50px);
-    margin-bottom: -20px;
-}
-
-.value-card {
-    background: var(--bg-white);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(84, 58, 32, 0.08);
-    text-align: center;
-    border-top: 4px solid var(--primary-color);
-    transition: var(--transition);
-}
-
-.value-card:hover {
-    transform: translateY(-5px);
-    border-top-color: var(--secondary-color);
-}
-
-.value-card i {
-    font-size: 40px;
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-}
-
-/* --- SECTION À PROPOS --- */
-.about-section {
-    padding: 80px 0;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.sub {
-    color: var(--secondary-color);
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.about-text h2 {
-    font-size: 36px;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.company-badge {
-    background-color: rgba(84, 58, 32, 0.05);
-    border-left: 4px solid var(--primary-color);
-    padding: 15px;
-    margin-top: 25px;
-}
-
-.about-stats {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.stat-box {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 25px;
-    border-radius: 6px;
-    text-align: center;
-}
-
-.stat-box h3 {
-    font-size: 32px;
-    color: var(--secondary-color);
-}
-
-/* --- SOLUTIONS MÉTIERS (PÔLES) --- */
-.poles-section {
-    padding: 80px 0;
-    background-color: rgba(84, 58, 32, 0.02);
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title h2 {
-    font-size: 36px;
-    color: var(--primary-color);
-}
-
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.pole-card {
-    background-color: var(--bg-white);
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-    border: 1px solid rgba(84, 58, 32, 0.1);
-    transition: var(--transition);
-}
-
-.pole-card:hover {
-    box-shadow: 0 10px 30px rgba(198, 22, 80, 0.08);
-}
-
-.pole-icon {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(198, 22, 80, 0.1);
-    color: var(--secondary-color);
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.pole-card h3 {
-    font-size: 20px;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.pole-card ul {
-    list-style: none;
-    margin-bottom: 25px;
-}
-
-.pole-card ul li {
-    margin-bottom: 12px;
-    color: #555;
-    font-size: 15px;
-}
-
-.pole-card ul li i {
-    color: var(--secondary-color);
-    margin-right: 8px;
-}
-
-.btn-link {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* --- CARROUSEL CONTINU --- */
-.references-section {
-    padding: 60px 0;
-    background-color: var(--bg-white);
-    overflow: hidden;
-}
-
-.slider {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.slide-track {
-    display: flex;
-    width: calc(250px * 12);
-    animation: scroll 25s linear infinite;
-}
-
-.slide {
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-placeholder {
-    padding: 15px 25px;
-    background: var(--bg-light);
-    border: 1px solid #eee;
-    font-weight: bold;
-    color: #777;
-    border-radius: 4px;
-}
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-250px * 6)); }
-}
-
-/* --- CONTACT & FORMULAIRE --- */
-.contact-section {
-    padding: 80px 0;
-}
-
-.info-blocks {
-    margin: 30px 0;
-}
-
-.info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.info-item i {
-    font-size: 20px;
-    color: var(--secondary-color);
-    margin-right: 15px;
-    width: 25px;
-}
-
-.map-placeholder {
-    height: 200px;
-    background-color: #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    color: #666;
-    border: 1px dashed var(--primary-color);
-}
-
-.contact-form-box {
-    background-color: var(--bg-white);
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(84, 58, 32, 0.05);
-}
-
-.contact-form-box h3 {
-    margin-bottom: 25px;
-    color: var(--primary-color);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.form-group input, .form-group select, .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: inherit;
-}
-
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-}
-
-.security-note {
-    font-size: 13px;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.btn-block {
-    width: 100%;
-    text-align: center;
-}
-
-/* --- FOOTER --- */
-.main-footer {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 30px 0;
-    text-align: center;
-    font-size: 14px;
-}
-
-.footer-bottom em {
-    color: var(--secondary-color);
-    font-style: normal;
-    font-weight: bold;
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 992px) {
-    .about-grid, .grid-2, .contact-section .grid-2 {
-        grid-template-columns: 1fr;
-    }
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-    .values-section {
-        transform: translateY(0);
-        padding-top: 40px;
-    }
-    .menu-toggle {
-        display: block;
-    }
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: var(--bg-white);
-        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-    }
-    .nav-menu.active {
-        display: block;
-    }
-    .nav-menu ul {
-        flex-direction: column;
-        padding: 20px 0;
-    }
-    .nav-menu ul li {
-        margin: 10px 0;
-    }
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crescentis Group - Solutions Globales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-flex">
+                <div class="logo">
+                    <h1>CRESCENTIS<span>group</span></h1>
+                </div>
+                <div class="menu-toggle" id="mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#poles">Nos Pôles</a></li>
+                        <li><a href="#references">Références</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact" class="btn-cta">Demande Rapide</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Solutions Globales</span>
+                <h2>Vos Partenaires de Confiance pour la Croissance</h2>
+                <p>Du conseil stratégique à l'exécution opérationnelle, Crescentis Group accompagne vos ambitions sur tous les continents.</p>
+                <a href="#contact" class="btn btn-primary">Démarrer Maintenant</a>
+                <a href="#poles" class="btn btn-secondary">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALEURS SECTION -->
+    <section class="values-section">
+        <div class="container">
+            <div class="grid-3">
+                <div class="value-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Innovation</h3>
+                    <p>Solutions modernes et disruptives adaptées aux défis d'aujourd'hui.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Partenariat</h3>
+                    <p>Collaboration étroite pour atteindre ensemble vos objectifs.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Fiabilité</h3>
+                    <p>Engagement et professionnalisme dans chaque projet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="sub">À Propos de Nous</span>
+                    <h2>Crescentis Group : Un Écosystème Complet</h2>
+                    <p>Fondée avec la vision de créer un groupe transversal, Crescentis Group réunit quatre pôles stratégiques interconnectés pour offrir des solutions holistiques.</p>
+                    <p>Avec des équipes basées à la Riviera Palmeraie et des partenaires internationaux, nous intervenons dans les secteurs clés de l'économie moderne.</p>
+                    <div class="company-badge">
+                        <strong>🌍 Présence Internationale</strong>
+                        <p>Opérations et partnerships en Afrique, Europe, et au-delà</p>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>4</h3>
+                        <p>Pôles de Compétence</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>50+</h3>
+                        <p>Projets Réussis</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>15+</h3>
+                        <p>Années d'Expérience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÔLES (SOLUTIONS MÉTIERS) -->
+    <section class="poles-section" id="poles">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Solutions Métiers</h2>
+                <p>Quatre pôles complémentaires pour couvrir l'ensemble de vos besoins</p>
+            </div>
+            <div class="grid-2">
+                <!-- PÔLE IT -->
+                <div class="pole-card">
+                    <div class="pole-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Pôle IT & Digital</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Ingénierie informatique & Intégration</li>
+                        <li><i class="fas fa-check"></i> Conception & Hébergement de sites Web</li>
+                        <li><i class="fas fa-check"></i> Stratégie E-commerce & Community Management</li>
+                        <li><i class="fas fa-check"></i> Audit, Maintenance & Infogérance</li>
+                        <li><i class="fas fa-check"></i> Systèmes de billettique & de paiement</li>
+                        <li><i class="fas fa-check"></i> Développement de solutions IA</li>
+                    </ul>
+                    <a href="javascript:selectPole('it')" class="btn-link">Détails →</a>
+                </div>
+
+                <!-- PÔLE COMMUNICATION -->
+                <div class="pole-card">
+                    <div class="pole-icon"><i class="fas fa-megaphone"></i></div>
+                    <h3>Pôle Communication & Événements</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Communication 360° & Publicité</li>
+                        <li><i class="fas fa-check"></i> Stratégie événementielle & Activation</li>
+                        <li><i class="fas fa-check"></i> Lobbying institutionnel & Parrainages</li>
+                        <li><i class="fas fa-check"></i> Logistique technique (Audiovisuel, Captation)</li>
+                    </ul>
+                    <a href="javascript:selectPole('com')" class="btn-link">Détails →</a>
+                </div>
+
+                <!-- PÔLE AFRIBUILD -->
+                <div class="pole-card">
+                    <div class="pole-icon"><i class="fas fa-building"></i></div>
+                    <h3>Pôle AfriBuilding & Services</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Construction & Infrastructures BTP</li>
+                        <li><i class="fas fa-check"></i> Nettoyage professionnel industriel</li>
+                        <li><i class="fas fa-check"></i> Entretien complet de biens meubles/immeubles</li>
+                    </ul>
+                    <a href="javascript:selectPole('afribuild')" class="btn-link">Détails →</a>
+                </div>
+
+                <!-- PÔLE CONSULTING -->
+                <div class="pole-card">
+                    <div class="pole-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Pôle Consulting & Commerce</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Négoce & Opérations commerciales internationales</li>
+                        <li><i class="fas fa-check"></i> Prospection & Intermédiation commerciale</li>
+                        <li><i class="fas fa-check"></i> Due Diligence & Audit de conformité</li>
+                        <li><i class="fas fa-check"></i> Ingénierie de Financement & Médiation</li>
+                    </ul>
+                    <a href="javascript:selectPole('consulting')" class="btn-link">Détails →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RÉFÉRENCES (CARROUSEL) -->
+    <section class="references-section" id="references">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Références & Partenaires</h2>
+            </div>
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide"><div class="logo-placeholder">Client 1</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 2</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 3</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 4</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 5</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 6</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 1</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 2</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 3</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 4</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 5</div></div>
+                    <div class="slide"><div class="logo-placeholder">Client 6</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FORMULAIRE -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-nous</h2>
+                <p>Envoyez-nous une demande et nos équipes vous répondront rapidement</p>
+            </div>
+            <div class="grid-2">
+                <div>
+                    <h3>Crescentis Group</h3>
+                    <div class="info-blocks">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Adresse</strong>
+                                <p>Riviera Palmeraie, Abidjan, Côte d'Ivoire</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Téléphone</strong>
+                                <p>+225 XX XX XX XX</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>contact@crescentisgroup.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-placeholder">
+                        <p>📍 Carte Google Maps (à intégrer)</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="contact-form-box">
+                        <h3>Formulaire de Demande</h3>
+                        <form id="intelligentForm">
+                            <div class="form-group">
+                                <label for="clientName">Nom Complet *</label>
+                                <input type="text" id="clientName" name="clientName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientEmail">Email *</label>
+                                <input type="email" id="clientEmail" name="clientEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientPhone">Téléphone</label>
+                                <input type="tel" id="clientPhone" name="clientPhone">
+                            </div>
+                            <div class="form-group">
+                                <label for="poleSelector">Pôle d'Intérêt *</label>
+                                <select id="poleSelector" name="poleSelector" onchange="updateDynamicFields()" required>
+                                    <option value="">-- Sélectionner un pôle --</option>
+                                    <option value="it">IT & Digital</option>
+                                    <option value="com">Communication & Événements</option>
+                                    <option value="afribuild">AfriBuilding & Services</option>
+                                    <option value="consulting">Consulting & Commerce</option>
+                                </select>
+                            </div>
+                            <div id="serviceOptionsContainer" style="display: none;">
+                                <div class="form-group">
+                                    <label for="serviceSelector">Service Spécifique</label>
+                                    <select id="serviceSelector" name="serviceSelector">
+                                        <option value="">-- Services disponibles --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientMessage">Votre Message</label>
+                                <textarea id="clientMessage" name="clientMessage" rows="5" placeholder="Décrivez votre projet..."></textarea>
+                            </div>
+                            <p class="security-note">✓ Vos données sont sécurisées et traitées confidentiellement</p>
+                            <button type="submit" class="btn btn-primary btn-block">Envoyer ma Demande</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Crescentis Group™ | Tous droits réservés. Conçu avec <em>❤</em> pour l'innovation</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
